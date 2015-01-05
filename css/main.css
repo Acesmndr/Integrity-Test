@@ -1,0 +1,264 @@
+/*body{
+	background: url('../images/day-sky.svg') no-repeat;
+}*/
+@font-face {
+    font-family: 'Robotothin';
+    src: url('../fonts/Roboto-Thin-webfont.eot');
+    src: url('../fonts/Roboto-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Thin-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Thin-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Thin-webfont.svg#../fonts/Robotothin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+	font-family: 'LittleMissPriss';
+	src: url('../fonts/LittleMissPriss.eot');
+	src: local('☺'), url('../fonts/LittleMissPriss.woff') format('woff'), url('../fonts/LittleMissPriss.ttf') format('truetype'), url('../fonts/LittleMissPriss.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+#header{
+	background: rgba(26,26,26,1.2);
+	font-family: Robotothin;
+	color: #fff;
+	box-shadow: 2px 2px 2px #000;
+	height: 70px;
+	width: 100%;
+	position: fixed;
+	z-index: 3;
+}
+@media (min-device-width: 200px){
+	.start{
+		float: right;
+		margin: 12px 40px 0 0;
+		background: transparent;
+		outline: none;
+		border: 2px solid #fff;
+		font-family: LittleMissPriss;
+		font-size: 20px;
+		letter-spacing: 5px;
+		padding: 8px;
+		-webkit-transition: all 0.4s ease-in-out;
+		-moz-transition: all 0.4s ease-in-out;
+		-o-transition: all 0.4s ease-in-out;
+		transition: all 0.4s ease-in-out;
+	}
+	.start:hover{
+		color: #344;
+		background: #fff;
+		-webkit-transition: all 0.4s ease-in-out;
+		-moz-transition: all 0.4s ease-in-out;
+		-o-transition: all 0.4s ease-in-out;
+		transition: all 0.4s ease-in-out;
+	}
+}
+#logobackground{
+	background: url('../images/poor.jpg')  69% 20% no-repeat;
+	height: 500px;
+	padding-top:70px;
+}
+.quotation{
+	margin-top: 70px;
+	font-family: Robotothin;
+	text-align: right;
+	font-size: 20px;
+	color: #fff;
+	z-index: 1;
+}
+.aboutIntegrity1{
+	width: 50%;
+	min-height: 300px;
+	max-height: auto;
+	float: left;
+	background: #ebecee;
+	overflow: hidden;
+	transition: all 300ms ease-in-out;
+}
+.aboutIntegrity2{
+		width: 50%;
+		min-height: 300px;
+		max-height: auto;
+		float: left;
+		background: #f26c51;
+		transition: all 300ms ease-in-out;
+	}	
+@media screen and (max-width: 500px){
+	.aboutIntegrity1{
+		width: 100%;
+		min-height: 300px;
+		max-height: auto;
+		float: left;
+		background: #ebecee;
+		overflow: hidden;
+		transition: all 300ms ease-in-out;
+	}
+	.aboutIntegrity2{
+		width: 100%;
+		min-height: 300px;
+		max-height: auto;
+		float: left;
+		background: #f26c51;
+		overflow: hidden;
+		transition: all 300ms ease-in-out;
+	}
+}
+.title{
+	font-size: 30px;
+	padding: 50px 0 10px 20px;
+	font-family: Robotothin;
+}
+.title2{
+	font-size: 30px;
+	padding: 50px 0 10px 20px;
+	font-family: Robotothin;
+	color: #fff;
+}
+.infointegrity{
+	font-size: 17px;
+	padding: 0 15px 0 20px;
+	font-family: Robotothin;
+}
+.infointegrity2{
+	color: #fff;
+	font-size: 17px;
+	padding: 0 15px 10px 20px;
+	font-family: Robotothin;
+}
+/*@media only screen and (width: 267px){
+	.aboutIntegrity1{
+		width: 100%;
+		height: auto;
+		float: left;
+		background: #0180ba;
+	}
+	.aboutIntegrity2{
+		width: 100%;
+		height: auto;
+		float: left;
+		background: #f26c51;
+	}
+}*/
+.aboutus{
+	background: #428bca;
+}
+#logo{
+	width: 200px;
+}
+#sectionContainer{
+	display: none;
+	background: url('../images/chalkboard.png') no-repeat;
+	padding: 10px;
+	border:1px solid #000;
+	height: 520px;
+	margin-bottom: 30px;
+}
+.question{	
+	color: #fff;
+	font-size: 30px;
+}
+.award{
+	overflow-x: hidden; 
+	margin-top: 60px;
+	margin-left: 30px;
+	-moz-transform: rotate(-25deg);
+	-ms-transform: rotate(-25deg);
+	-webkit-transform: rotate(-25deg);
+	transform: rotate(-25deg);
+}
+.aboutCentral{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	border: 1px solid transparent;
+	color: #fff;
+	font-family: Robotothin;
+	font-size: 30px;
+}
+.aboutimg1{
+	border-radius: 50%;
+	margin: 0 35px;
+	width: 100px;
+}
+.aboutimg2{
+	border-radius: 50%;
+	margin: 0 75px;
+	width: 100px;
+}
+.aboutimg3{
+	border-radius: 50%;
+	margin: 0 48px;
+	width: 100px;
+}
+.aboutimg4{
+	border-radius: 50%;
+	margin: 0 58px;
+	width: 100px;
+}
+
+/*InnerContainer page which is after the game is started, the css starts here*/
+#innerContainer{
+	background: #f26c51;
+}
+.shareOn{
+	float: right;
+	margin-right: 30px;
+	margin-top: 20px;
+}
+#field{
+	background: #f26c51;
+	padding: 30px;
+	margin: 100px 0;
+	box-shadow: 2px 2px 3px rgba(0, 104, 91, 1);
+	border-radius: 2px;
+}
+.latesttest{
+	font-family: Robotothin;
+	font-size: 40px;
+	color: #fff;
+}
+.adminform{
+	margin-top: 100px;
+}
+
+/*CMS page for admin starts here*/
+.signoff{
+	float: right;
+	margin-right: 20px;
+	font-size: 20px;
+	border: 1px solid #fff;
+	color: #fff;
+	padding: 8px;
+	margin-top: 12px;
+	font-family: LittleMissPriss;
+	letter-spacing: 5px;
+	font-weight: bold;
+}
+.signoff:hover{
+	background: #fff;
+	color: #000;
+	transition: all 0.6s ease-in-out;
+	-o-transition: all 0.6s ease-in-out;
+	-moz-transition: all 0.6s ease-in-out;
+	-webkit-transition: all 0.6s ease-in-out;
+}
+.welcomeAdmin{
+	font-family: Robotothin;
+	color: #000;
+	font-size: 40px;
+	margin: 40px 0; 
+}
+/*.inputhere{
+	margin-top: 100px;
+}
+.options{
+	border: 1px solid #000;
+}*/
+th,td{
+	vertical-align: middle;
+	margin: 3px 20px;
+	font-size: 15px;
+}
+.editbyAdmin{
+	margin-top: 100px;
+}
