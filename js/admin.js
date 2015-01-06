@@ -25,6 +25,11 @@ $.ajax({
 		if(result.target.id[0]=="d"){
 			var temp=confirm("Are you sure you want to delete this question?");
 			if(temp==true){
+				$.ajax({
+        				type    :'POST',
+        				url     :'delete.php',
+					data	:idToEdit
+					});
 				$(this).parent().parent().remove();
 			}
 			
