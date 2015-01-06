@@ -5,7 +5,7 @@
 <meta charset='UTF-8' />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel="stylesheet" type="text/css" href="css/main.css">
-<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css">
 <!--link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css.map">
 <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap-theme.min.css"-->
 <body>
@@ -32,6 +32,6 @@
 			</div>
 		</div>
 	</div>
-	<script src="bootstrap/dist/bootstrap.min.js"></script>
+	<!--script src="bootstrap/dist/bootstrap.min.js"></script-->
 </body>
 </html>
