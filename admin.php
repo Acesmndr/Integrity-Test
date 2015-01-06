@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css">
+<script type="text/javascript" src="js/vendor/jquery-1.11.1.min.js"></script>
 <!--link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css.map">
 <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap-theme.min.css"-->
 <body>
@@ -27,18 +28,18 @@
 		</div-->
 		<div class="editbyAdmin">
 			<div class="table-responsive">
-				<table class="table table-hover">
-					<tr class="active">
+				<table class="table table-hover" id="table">
+					<tr class="active" id="headerRow">
 						<th scope="col">ID</th>
 						<th scope="col">Questions</th>
 						<th scope="col">Edit</th>
 						<th scope="col">Delete</th>
 					</tr>
-					<tr class="active">
-						<td>1</td>
-						<td>What is your name?</td>
-						<td><button type="button" class="btn btn-primary" id="">Edit</button></td>
-						<td><button type="button" class="btn btn-danger" id="">Delete</button></td>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
 					</tr>
 				</table>
 			</div>
@@ -49,6 +50,6 @@
 			</div>
 		</div>
 	</div>
-	<!--script src="bootstrap/dist/bootstrap.min.js"></script-->
+	<script src="js/admin.js"></script>
 </body>
 </html>

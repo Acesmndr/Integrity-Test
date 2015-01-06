@@ -1,3 +1,8 @@
+var qid=1;
+var hint;
+var correctAnswerIndex;
+var teacher;
+var corEx=["You did the right thing","You made the correct choice!","Yes! you are right!","That is what even I would have done too","Yes! You are pretty smart"];
 function loader(qid){
 	$.ajax({
                     url: "output_json.php",
@@ -16,6 +21,28 @@ function loader(qid){
 	}	
 	});
 }
+$(".answeroption").click(function(){
+	if(parseInt(this.id.slice(3))==correctAnswerIndex){
+		qid++;
+		loader(qid);
+		teacher.play("Congratulate");
+		teacher.speak(corEx[Math.floor(Math.random() * 4)]);
+	}else{
+		teacher.speak(hint);
+	}
+});
 (function(){
-	loader(1);
-	}();
+	clippy.load('Genius', function(agent){
+	teacher=agent;
+	agent.moveTo(window.innerWidth-200,window.innerHeight/1.6);
+	agent.play("Greeting");
+	console.log(agent.animations());
+	});
+	
+	})();
+var img = document.createElement('img');
+			img.src = "http://s3.amazonaws.com/clippy.js/Agents/Genius/map.png";
+			img.style.display = 'none'; // don't display preloaded images
+			img.onload = function () {
+				loader(1);
+				}
