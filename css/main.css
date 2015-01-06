@@ -179,6 +179,18 @@
 	-ms-transform: rotate(-25deg);
 	-webkit-transform: rotate(-25deg);
 	transform: rotate(-25deg);
+	width: 200px;
+}
+@media screen and (max-width: 782px){
+	.award{
+	overflow-x: hidden;
+	margin: 0 70%;
+	-moz-transform: rotate(-25deg);
+	-ms-transform: rotate(-25deg);
+	-webkit-transform: rotate(-25deg);
+	transform: rotate(-25deg);
+	width: 200px;
+}
 }
 .aboutCentral{
 	margin-top: 40px;
