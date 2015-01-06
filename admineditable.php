@@ -21,27 +21,27 @@
 			<div class="table-responsive">
 				<table class="table">
 					<tr class="active">
-						<th scope="col" colspan="3"><input type="text" class="form-control" placeholder="Your question here"></th>
+						<th scope="col" colspan="3"><input type="text" class="form-control" placeholder="Your question here" id="qstn"></th>
 					</tr>
 					<tr class="active">
-						<td><textarea class="form-control" rows="2" placeholder="Answer option 1"></textarea></td>
-						<td><label><input type="radio" name="answer1" value=""> Right</label></td>
-						<td><textarea class="form-control" rows="2" placeholder="Hint option 1"></textarea></td>
+						<td><textarea class="form-control" rows="2" placeholder="Answer option 1" id="ans1"></textarea></td>
+						<td><label><input type="radio" name="answer1" value="0" checked> Right</label></td>
+						<td><textarea class="form-control" rows="2" placeholder="Hint option 1" id="hint1"></textarea></td>
 					</tr>
 					<tr class="active">
-						<td><textarea class="form-control" rows="2" placeholder="Answer option 2"></textarea></td>
-						<td><label><input type="radio" name="answer1" value=""> Right</label></td>
-						<td><textarea class="form-control" rows="2" placeholder="Hint option 2"></textarea></td>
+						<td><textarea class="form-control" rows="2" placeholder="Answer option 2" id="ans2"></textarea></td>
+						<td><label><input type="radio" name="answer1" value="1"> Right</label></td>
+						<td><textarea class="form-control" rows="2" placeholder="Hint option 2" id="hint2"></textarea></td>
 					</tr>
 					<tr class="active">
-						<td><textarea class="form-control" rows="2" placeholder="Answer option 3"></textarea></td>
-						<td><label><input type="radio" name="answer1" value="">  Right</label></td>
-						<td><textarea class="form-control" rows="2" placeholder="Hint option 3"></textarea></td>
+						<td><textarea class="form-control" rows="2" placeholder="Answer option 3" id="ans3"></textarea></td>
+						<td><label><input type="radio" name="answer1" value=2">  Right</label></td>
+						<td><textarea class="form-control" rows="2" placeholder="Hint option 3" id="hint3"></textarea></td>
 					</tr>
 					<tr class="active">
-						<td><textarea class="form-control" rows="2" placeholder="Answer option 4"></textarea></td>
-						<td><label><input type="radio" name="answer1" value="">   Right</label></td>
-						<td><textarea class="form-control" rows="2" placeholder="Hint option 4"></textarea></td>
+						<td><textarea class="form-control" rows="2" placeholder="Answer option 4" id="ans4"></textarea></td>
+						<td><label><input type="radio" name="answer1" value="3">   Right</label></td>
+						<td><textarea class="form-control" rows="2" placeholder="Hint option 4" id="hint4"></textarea></td>
 					</tr>
 					<tr class="active">
 						<td></td>
@@ -71,6 +71,6 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/admin.js"></script>
+	<script src="js/edit.js"></script>
 </body>
 </html>
