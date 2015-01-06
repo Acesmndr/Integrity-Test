@@ -70,38 +70,51 @@
 .aboutIntegrity1{
 	width: 50%;
 	min-height: 300px;
-	max-height: auto;
+	height: 320px;
 	float: left;
 	background: #ebecee;
 	overflow: hidden;
 	transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-webkit-transition: all 300ms ease-in-out;
 }
 .aboutIntegrity2{
 		width: 50%;
 		min-height: 300px;
-		max-height: auto;
+		height: 320px;
 		float: left;
 		background: #f26c51;
+		overflow: hidden;
 		transition: all 300ms ease-in-out;
+		-o-transition: all 300ms ease-in-out;
+		-moz-transition: all 300ms ease-in-out;
+		-webkit-transition: all 300ms ease-in-out;
 	}	
-@media screen and (max-width: 500px){
+@media screen and (max-width: 782px){
 	.aboutIntegrity1{
 		width: 100%;
 		min-height: 300px;
-		max-height: auto;
+		max-height: 320px;
 		float: left;
 		background: #ebecee;
-		overflow: hidden;
+		padding-bottom: 30px;
 		transition: all 300ms ease-in-out;
+		-o-transition: all 300ms ease-in-out;
+		-moz-transition: all 300ms ease-in-out;
+		-webkit-transition: all 300ms ease-in-out;
 	}
 	.aboutIntegrity2{
 		width: 100%;
 		min-height: 300px;
-		max-height: auto;
+		max-height:  320px;
 		float: left;
 		background: #f26c51;
-		overflow: hidden;
+		padding-bottom: 30px;
 		transition: all 300ms ease-in-out;
+		-o-transition: all 300ms ease-in-out;
+		-moz-transition: all 300ms ease-in-out;
+		-webkit-transition: all 300ms ease-in-out;
 	}
 }
 .title{
