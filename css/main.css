@@ -390,3 +390,13 @@ th,td{
 .editbyAdmin{
 	margin-top: 100px;
 }
+
+/*Page to insert questions starts here*/
+.answertextarea{
+	width: 100px;
+}
+.radiobutton{
+	padding: 20px;
+	margin: 30px;
+	border: 1px solid #000;
+}
