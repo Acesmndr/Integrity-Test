@@ -21,14 +21,18 @@ $.ajax({
 		}
 	$(".btn").on("click",function(result){
 		data=result;
-		var idToEdit=result.target.value;	
+		var idToEdit=result.target.value;
+		alert(idToEdit)	
 		if(result.target.id[0]=="d"){
 			var temp=confirm("Are you sure you want to delete this question?");
 			if(temp==true){
 				$.ajax({
         				type    :'POST',
         				url     :'delete.php',
-					data	:idToEdit
+					data	:{data:idToEdit},
+					success	:function(){
+						console.log("Deletes");						
+						}
 					});
 				$(this).parent().parent().remove();
 			}

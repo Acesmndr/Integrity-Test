@@ -1,12 +1,13 @@
-var qid=1;
+var qid=0;
 var hint;
+var qArray=new Array();
 var correctAnswerIndex;
 var teacher;
 var corEx=["You did the right thing","You made the correct choice!","Yes! you are right!","That is what even I would have done too","Yes! You are pretty smart"];
 function loader(qid){
 	$.ajax({
                     url: "output_json.php",
-                    data: {"qid":qid}, //returns all cells' data
+                    data: {"qid":qArray[qid]}, //returns all cells' data
                     dataType: 'json',
                     type: 'GET',
 		success:function(data){
@@ -32,6 +33,14 @@ $(".answeroption").click(function(){
 	}
 });
 (function(){
+	$.ajax({
+                    url: "random_question.php",
+                    dataType: 'json',
+                    type: 'GET',
+		    success:function(results){
+			qArray=results.random;
+		}
+	});		
 	clippy.load('Genius', function(agent){
 	teacher=agent;
 	agent.moveTo(window.innerWidth-200,window.innerHeight/1.6);
@@ -44,5 +53,5 @@ var img = document.createElement('img');
 			img.src = "http://s3.amazonaws.com/clippy.js/Agents/Genius/map.png";
 			img.style.display = 'none'; // don't display preloaded images
 			img.onload = function () {
-				loader(1);
+				loader(qid);
 				}
