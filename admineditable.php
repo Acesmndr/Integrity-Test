@@ -68,5 +68,9 @@
 		</div>
 	</div>
 	<script src="js/edit.js"></script>
+	<?php
+		if($_GET["data"])		
+			echo "hi";
+	?>
 </body>
 </html>
