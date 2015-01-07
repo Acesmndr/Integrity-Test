@@ -1,3 +1,4 @@
+var att;
 $(".btn").click(function(){
 	var correctAnswerIndex;
 	var question;
@@ -9,6 +10,7 @@ $(".btn").click(function(){
 		ansArray.push($("#ans"+i).val());
 		hintArray.push($("#hint"+i).val());
 	}
+	att=ansArray;
 	$.ajax({
         				type    :'POST',
         				url     :'insert_question.php',

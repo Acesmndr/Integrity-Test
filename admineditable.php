@@ -9,6 +9,14 @@
 <script type="text/javascript" src="js/vendor/jquery-1.11.1.min.js"></script>
 <!--link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css.map">
 <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap-theme.min.css"-->
+	<?php
+		if($_GET["qid"]){
+			/*for javascript*/
+			//mention code here to get all the data previously stored content from the qid received	
+			include("output_json.php");
+		//test	echo '<script type="text/javascript">alert('.$_GET["qid"].')</script>';
+		}
+	?>
 <body>
 	<div id="header">
 		<div class="nav">
@@ -68,5 +76,6 @@
 		</div>
 	</div>
 	<script src="js/edit.js"></script>
+	
 </body>
 </html>
