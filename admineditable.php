@@ -46,13 +46,9 @@
 					<tr class="active">
 						<td></td>
 						<td></td>
-						<td><button class="btn btn-success">Add Question</button></td>
+						<td><button class="btn btn-success">Add Question</button>&nbsp; &nbsp;<button class="btn btn-primary">Save</button></td>
 					</tr>
-					<tr class="active">
-						<td></td>
-						<td></td>
-						<td><button class="btn btn-primary">Save</button></td>
-					</tr>
+					
 						<!--div class="row">
 							<div class="col-md-2 inputQuestion">
 								Answer:
