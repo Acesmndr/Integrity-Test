@@ -319,6 +319,30 @@
 		-webkit-transition: all 300ms ease-in-out;
 	}
 }
+@media screen and (max-width: 350px){
+	.aboutIntegrity1{
+		width: 100%;
+		height: 520px;
+		float: left;
+		background: #ebecee;
+		padding-bottom: 30px;
+		transition: all 300ms ease-in-out;
+		-o-transition: all 300ms ease-in-out;
+		-moz-transition: all 300ms ease-in-out;
+		-webkit-transition: all 300ms ease-in-out;
+	}
+	.aboutIntegrity2{
+		width: 100%;
+		height:  400px;
+		float: left;
+		background: #f26c51;
+		padding-bottom: 30px;
+		transition: all 300ms ease-in-out;
+		-o-transition: all 300ms ease-in-out;
+		-moz-transition: all 300ms ease-in-out;
+		-webkit-transition: all 300ms ease-in-out;
+	}
+}
 @media screen and (max-width: 300px){
 	.aboutIntegrity1{
 		width: 100%;
@@ -379,9 +403,7 @@
 		background: #f26c51;
 	}
 }*/
-.aboutus{
-	background: #428bca;
-}
+
 #logo{
 	width: 200px;
 }
@@ -418,35 +440,36 @@
 	width: 200px;
 }
 }
+.aboutus{
+	background: #428bca;
+	padding-bottom: 20px;
+}
 .aboutCentral{
-	margin-top: 40px;
-	margin-bottom: 40px;
-	border: 1px solid transparent;
 	color: #fff;
 	font-family: Robotothin;
 	font-size: 30px;
 }
-.aboutimg1{
-	border-radius: 50%;
-	margin: 0 35px;
-	width: 100px;
+.p1{
+	padding-top: 30px;
 }
-.aboutimg2{
-	border-radius: 50%;
-	margin: 0 75px;
-	width: 100px;
+.ourNames{
+	font-size: 20px;
+	height: auto;
+	margin-top: 40px;
 }
-.aboutimg3{
-	border-radius: 50%;
-	margin: 0 48px;
-	width: 100px;
+@media screen and (max-width: 500px){
+	.p1{
+	padding-top: 60px;
 }
-.aboutimg4{
-	border-radius: 50%;
-	margin: 0 58px;
-	width: 100px;
+	.ourNames{
+	font-size: 20px;
+	height: auto;
 }
-
+}
+.ourlinks{
+	text-decoration: none;
+	color: #fff;
+}
 /*InnerContainer page which is after the game is started, the css starts here*/
 #innerContainer{
 	background: url('../images/class.jpg') 47% 0 no-repeat;
