@@ -1,8 +1,9 @@
 var qid=0;
-var hint;
+var hintArray=new Array();
 var qArray=new Array();
 var correctAnswerIndex;
 var teacher;
+//var datar;
 var corEx=["You did the right thing","You made the correct choice!","Yes! you are right!","That is what even I would have done too","Yes! You are pretty smart"];
 function loader(qid){
 	$.ajax({
@@ -12,8 +13,8 @@ function loader(qid){
                     type: 'GET',
 		success:function(data){
 	correctAnswerIndex=data.correct;
-	hint=data.hint;
-	arr=data;	
+	hintArray=data.hint;
+	//datar=data;	
 	$("#question").text(data.output);
 	$("#ans1").text(data.option[0]);
 	$("#ans2").text(data.option[1]);
@@ -23,13 +24,15 @@ function loader(qid){
 	});
 }
 $(".answeroption").click(function(){
-	if(parseInt(this.id.slice(3))==correctAnswerIndex){
+	console.log(this.id);
+	var clickIndex=parseInt(this.id.slice(3));
+	if(clickIndex==correctAnswerIndex){
 		qid++;
 		loader(qid);
 		teacher.play("Congratulate");
 		teacher.speak(corEx[Math.floor(Math.random() * 4)]);
 	}else{
-		teacher.speak(hint);
+		teacher.speak(hintArray[clickIndex-1]);
 	}
 });
 (function(){
