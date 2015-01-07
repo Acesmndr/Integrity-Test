@@ -10,7 +10,9 @@
 
 	$outputarray = array();
 	$answer_array = array();
+	$hint_array = array();
 	
+
 	$conn = mysql_connect($DB_host,$DB_user,$DB_password);
 	if( !$conn){
 //		echo "error";
@@ -27,7 +29,8 @@
 
 	while( $row = mysql_fetch_array($retval,MYSQL_ASSOC)){
 			array_push($answer_array,$row['answers']);
-			$hint_from_answer = $row['hint'];
+			array_push($hint_array,$row['hint']);
+				//previous code hint_from_answer = $row['hint'];
 	}
 // answers are already in array 	$answer_array;
 
@@ -41,26 +44,17 @@
 	
 	while( $row = mysql_fetch_array($retval,MYSQL_ASSOC)){
 		$question = $row['question'];
-		$hint = $hint_from_answer;
+				//previous code	$hint = $hint_from_answer;
+		$hint = $hint_array;
 		$correct_index = $row['correct_answer'];
 	}
-/*		TEST CODE	
-	array_push($outputarray,$question);
-	array_push($outputarray,$answer_array);
-	array_push($outputarray,$correct_index);
-	array_push($outputarray,$hint_from_answer);
-
-	$temp = array("output"=> $outputarray);
-	$json_output = json_encode($temp);
-	echo $json_output;
-*/
-	
 
 /*output to json format
 */
 	$outputarray['output'] = $question;
 	$outputarray['option'] = $answer_array;
 	$outputarray['correct'] = $correct_index;
-	$outputarray['hint'] = $hint_from_answer;
+//previous code	$outputarray['hint'] = $hint_from_answer;
+	$outputarray['hint'] = $hint_array;
 	$json_output = json_encode($outputarray);
 	echo $json_output;
