@@ -22,7 +22,6 @@ $.ajax({
 	$(".btn").on("click",function(result){
 		data=result;
 		var idToEdit=result.target.value;
-		alert(idToEdit)	
 		if(result.target.id[0]=="d"){
 			var temp=confirm("Are you sure you want to delete this question?");
 			if(temp==true){
@@ -38,7 +37,7 @@ $.ajax({
 			}
 			
 		}else{
-					
+			location.href="admineditable.php?qid="+idToEdit;		
 		}		
 	});
         }
