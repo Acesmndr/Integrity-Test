@@ -469,6 +469,15 @@
 .ourlinks{
 	text-decoration: none;
 	color: #fff;
+	transition: all 0.5s;
+}
+.ourlinks:hover{
+	text-decoration: none;
+	transition: all 0.5s;
+}
+.contactUs{
+	font-size: 19px;
+	padding: 30px 20px 40px 20px;
 }
 /*InnerContainer page which is after the game is started, the css starts here*/
 #innerContainer{
