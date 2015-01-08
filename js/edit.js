@@ -1,8 +1,7 @@
 var editOrNew=0;
-if(phpData!=undefined){
+if(phpData!="default"){
 	editOrNew=1;
-	$('input[type=radio][name=answer0]').attr("checked",false);
-	$('input[type=radio][name=answer'+phpData.correct+']').attr("checked",true);
+	$("input[type=radio][value="+parseInt(phpData.correct)+"]").click();
 	$("#qstn").val(phpData.output);
 	correctAnswerIndex=phpData.correct;
 	question=phpData.question;
@@ -18,9 +17,17 @@ $(".btn").click(function(){
 	var hintArray=new Array();
 	question=$("#qstn").val();
 	correctAnswerIndex=($('input[type=radio]:checked').val());
+	if(question==""){
+		alert("Question can't be empty");
+		return;
+		}
 	for(i=1;i<5;i++){
 		ansArray.push($("#ans"+i).val());
 		hintArray.push($("#hint"+i).val());
+		if(($("#ans"+i).val())==""){
+			alert("Answer Field can't be empty");
+			return; 
+		}
 	}
 	if(editOrNew!=0){
 					$.ajax({

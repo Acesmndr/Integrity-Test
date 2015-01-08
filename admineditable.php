@@ -10,6 +10,7 @@
 <!--link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css.map">
 <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap-theme.min.css"-->
 	<?php
+		echo '<script type="text/javascript">var qId;var phpData="default";</script>';
 		if($_GET["qid"]){
 			/*for javascript*/
 			//mention code here to get all the data previously stored content from the qid received	
@@ -17,7 +18,7 @@
 			ob_start();
 			include("output_json.php");
 			ob_end_clean();
-			echo '<script type="text/javascript">var qId='.$_GET["qid"].';var phpData='.$json_output.';</script>';
+			echo '<script type="text/javascript">qId='.$_GET["qid"].';phpData='.$json_output.';</script>';
 		}
 	?>
 <body>
@@ -36,22 +37,22 @@
 					</tr>
 					<tr class="active">
 						<td><textarea class="form-control" rows="2" placeholder="Answer option 1" id="ans1"></textarea></td>
-						<td><label><input type="radio" name="answer0" value="0" checked> Right</label></td>
+						<td><label><input type="radio" name="answer" value="0" checked> Right</label></td>
 						<td><textarea class="form-control" rows="2" placeholder="Hint option 1" id="hint1"></textarea></td>
 					</tr>
 					<tr class="active">
 						<td><textarea class="form-control" rows="2" placeholder="Answer option 2" id="ans2"></textarea></td>
-						<td><label><input type="radio" name="answer1" value="1"> Right</label></td>
+						<td><label><input type="radio" name="answer" value="1"> Right</label></td>
 						<td><textarea class="form-control" rows="2" placeholder="Hint option 2" id="hint2"></textarea></td>
 					</tr>
 					<tr class="active">
 						<td><textarea class="form-control" rows="2" placeholder="Answer option 3" id="ans3"></textarea></td>
-						<td><label><input type="radio" name="answer2" value=2">  Right</label></td>
+						<td><label><input type="radio" name="answer" value="2">  Right</label></td>
 						<td><textarea class="form-control" rows="2" placeholder="Hint option 3" id="hint3"></textarea></td>
 					</tr>
 					<tr class="active">
 						<td><textarea class="form-control" rows="2" placeholder="Answer option 4" id="ans4"></textarea></td>
-						<td><label><input type="radio" name="answer3" value="3">   Right</label></td>
+						<td><label><input type="radio" name="answer" value="3">   Right</label></td>
 						<td><textarea class="form-control" rows="2" placeholder="Hint option 4" id="hint4"></textarea></td>
 					</tr>
 					<tr class="active">
