@@ -53,7 +53,7 @@
 */
 	$outputarray['output'] = $question;
 	$outputarray['option'] = $answer_array;
-	$outputarray['correct'] = $correct_index;
+	$outputarray['correct'] = $correct_index-1;
 //previous code	$outputarray['hint'] = $hint_from_answer;
 	$outputarray['hint'] = $hint_array;
 	$json_output = json_encode($outputarray);

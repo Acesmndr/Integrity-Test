@@ -8,7 +8,9 @@ if(phpData!="default"){
 	for(i=1;i<5;i++){
 		$("#ans"+i).val(phpData.option[i-1]);
 		$("#hint"+i).val(phpData.hint[i-1]);
-	}	
+	}
+	$(".btn-success").hide();
+	$(".btn-primary").html("Update");	
 }	
 $(".btn").click(function(){
 	var correctAnswerIndex;
@@ -35,7 +37,7 @@ $(".btn").click(function(){
         				url     :'edit_question.php',
 					data	:{qid:qId,correct:correctAnswerIndex,answer:ansArray,hint:hintArray,question:question},
 					success	:function(){
-						//location.href="admin.php";
+						location.href="admin.php";
 						}
 					});
 	}else{
@@ -49,5 +51,8 @@ $(".btn").click(function(){
 						}
 				});
 	}
+	});
+$(".btn-primary").click(function(){
+	location.href="admin.php";
 	});
 	
