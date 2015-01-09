@@ -27,7 +27,7 @@
 	font-style: normal;
 }
 #header{
-	background: rgba(26,26,26,1.2);
+	background: rgba(26,26,26,1.2);/*#374046;*/
 	font-family: Robotothin;
 	color: #fff;
 	box-shadow: 2px 2px 2px #000;
@@ -91,7 +91,7 @@
 	}
 }
 #logobackground{
-	background: #004861 url('../images/background2.svg') 50% 0 no-repeat;
+	background:  #374046 url('../images/background.svg') 50% 43% no-repeat;/*#FFF2A6 */
 	height: 570px;
 	padding-top:70px;
 }
@@ -389,21 +389,6 @@
 	padding: 0 15px 10px 20px;
 	font-family: Robotothin;
 }
-/*@media only screen and (width: 267px){
-	.aboutIntegrity1{
-		width: 100%;
-		height: auto;
-		float: left;
-		background: #0180ba;
-	}
-	.aboutIntegrity2{
-		width: 100%;
-		height: auto;
-		float: left;
-		background: #f26c51;
-	}
-}*/
-
 #logo{
 	width: 200px;
 }
