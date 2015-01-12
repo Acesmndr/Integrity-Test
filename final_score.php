@@ -52,9 +52,12 @@
 //		echo "ok";
 	}
 
-	calculate_average($conn,$output_array);
-	calculate_highest($conn,$output_array,$score_total);	//for the maximum score in that of score_total
-
+	$output['avg'] = calculate_average($conn,$output_array);
+	$output['max'] = calculate_highest($conn,$output_array,$score_total);	//for the maximum score in that of score_total
+	
+	array_push($output_array,$output['avg']);
+	array_push($output_array,$output['max']);
+	echo json_encode($output_array);
 
 function calculate_average($conn,$output_array){
 	$sql = "SELECT score,totalscore FROM score_table";
@@ -71,7 +74,7 @@ function calculate_average($conn,$output_array){
 	$avg_score = (float)($sum_score*100/$sum_totalscore);
 	//echo $avg_score;
 	
-	$output_array['avg']= $avg_score;
+	return $avg_score;
 }
 
 function calculate_highest($conn,$output_array,$score_total){
@@ -81,9 +84,9 @@ function calculate_highest($conn,$output_array,$score_total){
 			$max_score = $row['MAX(score)'];
 		}
 //	echo $max_score;
-		$max_percent = (float)($max_score*100/$score_total);
+		$max_percent=($max_score/$score_total)*100;
 	
-	$output_array['max'] = $max_percent;
-	
+	return $max_percent;
+
 }
 
