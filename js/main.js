@@ -5,10 +5,10 @@ var correctAnswerIndex;
 var teacher;
 var score=0,scoreadd=2,scoretotal=0;
 //var datar;
-var corEx=["You did the right thing","You made the correct choice!","Yes! you are right!","That is what even I would have done too","Yes! You are pretty smart"];
+var corEx=["You did the right thing","You made the right choice!","Yes! you are right!","That is what even I would have done too","Yes! You are pretty smart"];
 function loader(qid){
 	$.ajax({
-                    url: "output_json.php",
+                    url: "lib/output_json.php",
                     data: {"qid":qArray[qid]},
                     dataType: 'json',
                     type: 'GET',
@@ -46,7 +46,7 @@ $(".answeroption").click(function(){
 			$("#question").text("You scored "+score+" out of "+scoretotal+" in Integrity Test!"+result);
 			$.ajax({
         				type    :'GET',
-        				url     :'final_score.php',
+        				url     :'lib/final_score.php',
 					data	:{score:score,scoretotal:scoretotal},
 					success	:function(){
 						}
@@ -78,7 +78,7 @@ var img = document.createElement('img');
 			img.style.display = 'none'; // don't display preloaded images
 			img.onload = function () {
 					$.ajax({
-                    				url: "random_question.php",
+                    				url: "lib/random_question.php",
                     				dataType: 'json',
                     				type: 'GET',
 		    				success:function(results){

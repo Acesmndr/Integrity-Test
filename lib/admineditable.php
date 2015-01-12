@@ -4,9 +4,9 @@
 <title>Integrity Test</title>
 <meta charset='UTF-8' />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link rel="stylesheet" type="text/css" href="css/main.css">
-<link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css">
-<script type="text/javascript" src="js/vendor/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" type="text/css" href="../css/vendor/bootstrap.min.css">
+<script type="text/javascript" src="../js/vendor/jquery-1.11.1.min.js"></script>
 <!--link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css.map">
 <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap-theme.min.css"-->
 	<?php
@@ -24,7 +24,7 @@
 <body>
 	<div id="header">
 		<div class="nav">
-			<img src="images/logo.png" id="logo" class="col-md-4">
+			<img src="../images/logo.png" id="logo" class="col-md-4">
 				<div class="col-xs-onset-1 signoff">Sign off</div>
 		</div>
 	</div>
@@ -79,7 +79,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/edit.js"></script>
+	<script src="../js/edit.js"></script>
 	
 </body>
 </html>

@@ -3,7 +3,7 @@ var data;
 (function(){ 
 $.ajax({
         type    :'POST',
-        url     :'list_question.php',
+        url     :'lib/list_question.php',
         /*beforeSend:function(){
             $("#result").html('<img src="<?php echo base_url();?>assets/loading.gif"/>');
         },*/
@@ -27,7 +27,7 @@ $.ajax({
 			if(temp==true){
 				$.ajax({
         				type    :'POST',
-        				url     :'delete.php',
+        				url     :'lib/delete.php',
 					data	:{data:idToEdit},
 					success	:function(){
 						console.log("Deletes");						
@@ -37,7 +37,7 @@ $.ajax({
 			}
 			
 		}else{
-			location.href="admineditable.php?qid="+idToEdit;		
+			location.href="lib/admineditable.php?qid="+idToEdit;		
 		}		
 	});
         }
