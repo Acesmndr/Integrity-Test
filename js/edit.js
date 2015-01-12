@@ -34,16 +34,16 @@ $(".btn").click(function(){
 	if(editOrNew!=0){
 					$.ajax({
         				type    :'POST',
-        				url     :'lib/edit_question.php',
+        				url     :'edit_question.php',
 					data	:{qid:qId,correct:correctAnswerIndex,answer:ansArray,hint:hintArray,question:question},
 					success	:function(){
-						location.href="lib/admin.php";
+						location.href="admin.php";
 						}
 					});
 	}else{
 	$.ajax({
         				type    :'POST',
-        				url     :'lib/insert_question.php',
+        				url     :'insert_question.php',
 					data	:{correct:correctAnswerIndex,answer:ansArray,hint:hintArray,question:question},
 					success	:function(){
 						location.reload();			
@@ -53,6 +53,6 @@ $(".btn").click(function(){
 	}
 	});
 $(".btn-primary").click(function(){
-	location.href="lib/admin.php";
+	location.href="admin.php";
 	});
 	

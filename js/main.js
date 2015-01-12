@@ -4,11 +4,12 @@ var qArray=new Array();
 var correctAnswerIndex;
 var teacher;
 var score=0,scoreadd=2,scoretotal=0;
+var datatemp=0;
 //var datar;
 var corEx=["You did the right thing","You made the right choice!","Yes! you are right!","That is what even I would have done too","Yes! You are pretty smart"];
 function loader(qid){
 	$.ajax({
-                    url: "lib/output_json.php",
+                    url: "output_json.php",
                     data: {"qid":qArray[qid]},
                     dataType: 'json',
                     type: 'GET',
@@ -43,12 +44,13 @@ $(".answeroption").click(function(){
 					result="Sorry but you need to work a lot on your Integrity and Moral Values";
 				}
 			}	
-			$("#question").text("You scored "+score+" out of "+scoretotal+" in Integrity Test!"+result);
 			$.ajax({
         				type    :'GET',
-        				url     :'lib/final_score.php',
+        				url     :'final_score.php',
 					data	:{score:score,scoretotal:scoretotal},
-					success	:function(){
+					success	:function(results){
+							results=JSON.parse(results);
+						$("#question").html("Your score: "+score+" out of "+scoretotal+" </br>"+result+"</br> Average Score= "+results[0]+"</br> High Score="+results[1]);
 						}
 					});
 			
@@ -78,7 +80,7 @@ var img = document.createElement('img');
 			img.style.display = 'none'; // don't display preloaded images
 			img.onload = function () {
 					$.ajax({
-                    				url: "lib/random_question.php",
+                    				url: "random_question.php",
                     				dataType: 'json',
                     				type: 'GET',
 		    				success:function(results){

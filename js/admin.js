@@ -3,7 +3,7 @@ var data;
 (function(){ 
 $.ajax({
         type    :'POST',
-        url     :'lib/list_question.php',
+        url     :'list_question.php',
         /*beforeSend:function(){
             $("#result").html('<img src="<?php echo base_url();?>assets/loading.gif"/>');
         },*/
@@ -12,7 +12,7 @@ $.ajax({
 		for(i=0;i<result.data.length;i++){
 			var temp=result.data[i];
 			 var $tr = $('<tr/>');
-    			$tr.append($('<td/>').html(result.data[i][0]));
+    			$tr.append($('<td/>').html(i+1));
     			$tr.append($('<td/>').html(result.data[i][1]));
     			$tr.append($('<td/>').html('<button type="button" class="btn btn-primary" value='+result.data[i][0]+' id="e'+1+'">Edit</button>'));
 			$tr.append($('<td/>').html('<button type="button" class="btn btn-danger" value='+result.data[i][0]+' id="d'+1+'">Delete</button>'));
@@ -27,17 +27,16 @@ $.ajax({
 			if(temp==true){
 				$.ajax({
         				type    :'POST',
-        				url     :'lib/delete.php',
+        				url     :'delete.php',
 					data	:{data:idToEdit},
 					success	:function(){
-						console.log("Deletes");						
 						}
 					});
 				$(this).parent().parent().remove();
 			}
 			
 		}else{
-			location.href="lib/admineditable.php?qid="+idToEdit;		
+			location.href="admineditable.php?qid="+idToEdit;		
 		}		
 	});
         }

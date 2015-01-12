@@ -16,7 +16,7 @@
 			//mention code here to get all the data previously stored content from the qid received	
 			//test	echo '<script type="text/javascript">alert('.$_GET["qid"].')</script>';
 			ob_start();
-			include("output_json.php");
+			include("../output_json.php");
 			ob_end_clean();
 			echo '<script type="text/javascript">qId='.$_GET["qid"].';phpData='.$json_output.';</script>';
 		}
@@ -25,7 +25,7 @@
 	<div id="header">
 		<div class="nav">
 			<img src="../images/logo.png" id="logo" class="col-md-4">
-				<div class="col-xs-onset-1 signoff">Sign off</div>
+				<!--div class="col-xs-onset-1 signoff">Sign off</div-->
 		</div>
 	</div>
 	<div class="container">

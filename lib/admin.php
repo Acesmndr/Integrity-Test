@@ -13,7 +13,7 @@
 	<div id="header">
 		<div class="nav">
 			<img src="../images/logo.png" id="logo" class="col-md-4">
-				<div class="col-xs-onset-1 signoff">Sign off</div>
+				<!--div class="col-xs-onset-1 signoff">Sign off</div-->
 		</div>
 	</div>
 	<div class="container">

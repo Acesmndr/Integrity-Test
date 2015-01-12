@@ -1,0 +1,4 @@
+AuthName "YIPL"
+AuthType Basic
+AuthUserFile //var/.htpasswd
+Require valid-user
