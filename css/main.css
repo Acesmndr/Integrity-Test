@@ -379,9 +379,10 @@
 	color: #fff;
 }
 .infointegrity{
-	font-size: 17px;
+	font-size: 19px;
 	padding: 0 15px 0 20px;
 	font-family: Robotothin;
+	color: #000;
 }
 .infointegrity2{
 	color: #fff;
@@ -836,4 +837,72 @@ th,td{
 	padding: 20px;
 	margin: 30px;
 	border: 1px solid #000;
+}
+.scoreBoard{
+	text-align: center;
+	color: #fff;
+	font-size: 40px;
+	font-family: DK Cool Crayon;
+	padding: 20px 0;
+}
+.yourScore, .averageScore{
+	margin: 20px 20px;
+	font-family: DK Cool Crayon;
+	color: #fff;
+	font-size: 40px;
+	text-align: center;
+}
+.sharehere{
+	font-family: DK Cool Crayon;
+	color: #fff;
+	font-size: 40px;
+	width: 46%;
+	margin: 0 auto;
+	min-height: 190px;
+	padding: 40px 0;
+}
+.shareimagefb{
+	margin: 0 auto;
+	width:81px;
+}
+.shareimagetw{
+	margin: 0 auto;
+	width:70px;
+}
+@media screen and (max-width: 700px){
+	.scoreBoard{
+	text-align: center;
+	color: #fff;
+	font-size: 30px;
+	font-family: DK Cool Crayon;
+	padding: 15px 0; 
+}
+.yourScore, .averageScore{
+	margin: 15px 20px;
+	font-family: DK Cool Crayon;
+	color: #fff;
+	font-size: 30px;
+	text-align: center;
+	padding-top: 20px;
+}
+.sharehere{
+	font-family: DK Cool Crayon;
+	color: #fff;
+	font-size: 30px;
+	width: 46%;
+	margin: 0 auto;
+	min-height: 110px;
+	text-align: center;
+	padding: 40px 0;
+}
+.shareimagefb{
+	margin: 0 auto;
+	width:81px;
+	display: inline;
+}
+.shareimagetw{
+	margin: 0 auto;
+	display: inline;
+	width:70px;
+}
 }
