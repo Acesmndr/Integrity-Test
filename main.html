@@ -9,6 +9,8 @@
 <link rel="stylesheet" type="text/css" href="css/vendor/clippy.css" media="all">
 <!--link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap-theme.min.css"-->
 <script type="text/javascript" src="js/vendor/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+
 <body>
 	<div id="header">
 		<div class="nav">
@@ -17,11 +19,17 @@
 			<strong>START GAME</strong>
 			</button-->
 			<!--div class="shareOn"-->
-				<div class="col-xs-onset-1 shareOn"><div id="fb-root"></div>
-<a href="http://sites.google.com/site/testofintegrity" data-image="images/blackboard.jpg" data-title="Integrity Test" data-desc="I played Integrity Test" class="fb_share">
-    <img src="images/twitter.svg" width="28">
-</a></div>
-				<div class="col-xs-onset-1 shareOn"><a href="" title="Share on Facebook"><img src="images/fb.svg" width="13"></a></div>
+				<div class="col-xs-onset-1 shareOn"><a class="twitter-share-button" href="https://twitter.com/share"
+  data-related="twitterdev"
+  data-size="large"
+  data-count="none"
+  data-url= "http://localhost/Integrity-Test" 	
+  data-text="I scored 100% in integrity test! Find out your score at "
+	data-via="IntegrityTest"	>
+    <img src="images/twitter.svg" width="28"></a></div>
+				<div class="col-xs-onset-1 shareOn"><div id="fb-root"></div><a id="fbShare">
+    <img width="14" src="images/fb.svg" alt="Facebook" /> 
+  </a></div>
 		</div>
 	</div>
 	<div id="innerContainer">
@@ -50,12 +58,10 @@
 			</div>
 		</div>
 	</div>
-<div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-</div>
+<fb:share-button href="index.html" layout="link">asdfsadfasdf</fb:share-button>
+<!--a class="twitter-share-button" id="twitterlink" href="https://twitter.com/share" data-size="large" data-via="denvycom">Tweet</a-->
+<a id="tweeter">Tweet</a>
+<a id="fbs">Aces</a>
 <script src="js/vendor/clippy.min.js"></script>
 <script src="js/social.js"></script>
 <script type="text/javascript" src="js/main.js"></script>

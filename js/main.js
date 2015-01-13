@@ -26,6 +26,7 @@ function loader(qid){
 		});
 }
 $(".answeroption").click(function(){
+	teacher.stop();
 	var clickIndex=parseInt(this.id.slice(3));
 	if(clickIndex==correctAnswerIndex){
 		qid++;
@@ -61,7 +62,9 @@ $(".answeroption").click(function(){
 		teacher.speak(corEx[Math.floor(Math.random() * 4)]);
 	}else{
 		scoreadd=1;
+		teacher.play("GestureDown");
 		teacher.speak(hintArray[clickIndex]);
+		teacher.play("GetAttention")	
 	}
 });
 (function(){
@@ -76,7 +79,7 @@ $(".answeroption").click(function(){
 	
 	})();
 var img = document.createElement('img');
-			img.src = "http://s3.amazonaws.com/clippy.js/Agents/Genius/map.png";
+			img.src = "clippy/Genius/map.png";
 			img.style.display = 'none'; // don't display preloaded images
 			img.onload = function () {
 					$.ajax({
