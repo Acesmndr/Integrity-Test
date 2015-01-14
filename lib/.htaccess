@@ -1,4 +1,8 @@
 AuthName "YIPL"
 AuthType Basic
+
+#Edit the path upto the .htpasswd file for the password protection
+#The specified path must be the absolute path
 AuthUserFile //var/.htpasswd
+
 Require valid-user
