@@ -47,7 +47,6 @@ $(".btn").click(function(){
 					data	:{correct:correctAnswerIndex,answer:ansArray,hint:hintArray,question:question},
 					success	:function(){
 						location.reload();			
-						console.log("Inserted");						
 						}
 				});
 	}

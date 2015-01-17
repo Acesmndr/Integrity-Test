@@ -16,7 +16,6 @@ function loader(qid){
 		success:function(data){
 			correctAnswerIndex=data.correct;
 			hintArray=data.hint;
-			//datar=data;	
 			$("#question").text(data.output);
 			$("#ans0").text(data.option[0]);
 			$("#ans1").text(data.option[1]);
@@ -34,7 +33,14 @@ $(".answeroption").click(function(){
 		scoreadd=2;
 		scoretotal+=2;
 		if(qid==qArray.length){
-			var result=score/scoretotal*100;
+			score+=1000;
+			score=score.toString(16);
+			scoretotal+=1000;
+			scoretotal=scoretotal.toString(16);
+			var reloc="score.php?abc="+score+"&def="+scoretotal;
+			document.location.href=reloc;
+			return;
+			/*var result=score/scoretotal*100;
 			$(".row").hide();
 			if(result>=90){
 				result="You have great moral Values!";
@@ -53,13 +59,17 @@ $(".answeroption").click(function(){
 							results=JSON.parse(results);
 						$("#question").html("Your score: "+score+" out of "+scoretotal+" </br>"+result+"</br> Average Score= "+results[0]+"</br> High Score="+results[1]);
 						}
-					});
+					});*/
 			
 		}
 		loader(qid);
 		teacher.play("Congratulate");
 		$("#score").html(score+"/"+scoretotal);
-		teacher.speak(corEx[Math.floor(Math.random() * 4)]);
+		if(hintArray[clickIndex]==""){
+			teacher.speak(corEx[Math.floor(Math.random() * 4)]);
+		}else{
+			teacher.speak(hintArray[clickIndex]);
+		}
 	}else{
 		scoreadd=1;
 		teacher.play("GestureDown");
@@ -72,9 +82,8 @@ $(".answeroption").click(function(){
 	$("#date1").html("Date: "+now.toDateString());
 	clippy.load('Genius', function(agent){
 	teacher=agent;
-	agent.moveTo(window.innerWidth-200,window.innerHeight/1.6);
+	agent.moveTo(3*window.innerWidth/4,window.innerHeight/1.8);
 	//agent.play("Greeting");
-	//console.log(agent.animations());
 	});
 	
 	})();

@@ -1,3 +1,5 @@
+var share_url='http://integrity-test.com' //need to change it to the URL!
+var scorePromo='I scored 100% in Integrity Test! Play to know yours!';
 window.fbAsyncInit = function() {
     FB.init({
       appId      : '1526576327594693',
@@ -16,14 +18,12 @@ window.fbAsyncInit = function() {
    }(document, 'script', 'facebook-jssdk'));
 
 function fbShareFunction(){
-	var product_name ='I scored 100% in Integrity Test! Play to know yours!';
 	var description ='Integrity Test is an game where you play as well as learn different factors of Integrity! In this game you choose from different answers and learn which is right and which is wrong along the way';
 	var share_image ="https://www.dropbox.com/s/p6oicf5s1bjfz2m/FBbanner.jpg?dl=1";
-	var share_url ='main.html';	
-        var share_capt ='Awesome Score';
+	var share_capt ='Awesome Score';
     FB.ui({
         method: 'feed',
-        name: product_name,
+        name: scorePromo,
         link: share_url,
         picture: share_image,
         caption: share_capt,
@@ -38,17 +38,30 @@ function fbShareFunction(){
 $("#fbShare").click(function(){
 		fbShareFunction();	
 	});
-
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-/*(function(){var link = document.createElement('a');
-link.setAttribute('href', 'https://twitter.com/share');
-link.setAttribute('class', 'twitter-share-button');
-link.setAttribute('style', 'margin-top:5px;');
-link.setAttribute("data-text" , "I just achieved a score of " + score + " on #2048Lagos a game where you find transport methods in lagos and score high." );
-link.setAttribute("data-via" ,"denvycom") ;
-link.setAttribute("data-size" ,"large") ;
-document.appendChild(link) ;
-twttr.widgets.load();})()*/
-
-
+score=parseInt(score,16);
+scoretotal=parseInt(scoretotal,16);
+score-=1000;
+scoretotal-=1000;
+var result=score/scoretotal*100;
+scorePromo='I scored '+result+'% in Integrity Test! Play to know yours!';
+$("a[id=twitter_share]").attr("href","http://twitter.com/share?via=IntegrityTest&text="+encodeURI(scorePromo)+"&url="+share_url);
+/*if(result>=90){
+				result="You have great moral Values!";
+			}else{
+				if(result>=75){
+					result="You need to learn about Integrity a little more";
+				}else{
+					result="Sorry but you need to work a lot on your Integrity and Moral Values";
+				}
+			}*/	
+			$.ajax({
+        				type    :'GET',
+        				url     :'final_score.php',
+					data	:{score:score,scoretotal:scoretotal},
+					success	:function(results){
+							var results=JSON.parse(results);
+							$("#myScore").text(result+"%");
+							$("#avgScore").text(results[0].toFixed(2)+"%");
+						}
+					});
 

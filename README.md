@@ -1,5 +1,8 @@
 Integrity-Test
 ==============
+* Instructions for share url :
+1. Open js/social.js
+2. Replace share_url's value with the url of the index page of the website!
 
 * Manual Instructions for setup :
 
@@ -82,6 +85,7 @@ NOTE: Attributes are case sensitive.
 5.  Change the password in the package files in “database.init.php” and “lib/database.init.php”  
          to your localhost password.
 6.   Change the required mode of the package to executable.
+
 
 
 	
