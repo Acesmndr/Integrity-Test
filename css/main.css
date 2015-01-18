@@ -91,7 +91,7 @@
 	}
 }
 #logobackground{
-	background:  #374046 url('../images/background.svg') 50% 43% no-repeat;/*#FFF2A6 */
+	background: url('../images/background.jpg') 50% 43% no-repeat;/*#FFF2A6 */
 	height: 570px;
 	padding-top:70px;
 }
