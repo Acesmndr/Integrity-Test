@@ -25,11 +25,11 @@
 					<div class="row">
 						<div class="col-md-6 yourScore">
 							<div class="row">Your Score</div>
-							<!--img src="images/award.svg" width="60px"/--><c id="myScore"> Score</c>
+							<img src="images/award.svg" width="60px" /><c id="myScore"> Score</c>
 						</div>
 						<div class="col-md-5 averageScore">
 							<div class="row">Average Score</div>
-							<!--img src="images/award.svg" width="60px"/--><c id="avgScore"> Score</c>
+							<img src="images/award.svg" width="60px" /><c id="avgScore"> Score</c>
 						</div>
 					</div>
 				<div class="sharehere">Share your score
