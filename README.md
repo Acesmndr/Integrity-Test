@@ -28,8 +28,11 @@ NOTE: Delete the “httpd.conf” file from the package.
 4.   Change the required mode of the package to executable.
 
 
-
-	
+FILES FOR ADMIN:
+The folder "lib/" contains the files for the admin to insert,edit and delete questions for the game play.
+1. "lib/admin.php" lists the existing questions.
+	Thereby, admin can edit the listed questions using the UI.
+NOTE: The "lib/admin.php" file is only allowed by the authentication from username and password mentioned in ".htpasswd" created previously.
  	
 	
 
